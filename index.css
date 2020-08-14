@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Nunito&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	--font-primary: 'Alata', sans-serif;
+	--font-secondary: 'Nunito', sans-serif;
+	--primary: #febf63;
+	--secondary: #ede682;
+	--light: #ade498;
+	--dark: #7fdbda;
+}
+
+.container {
+	background: var(--primary);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+#drum-machine {
+	background: var(--light);
+	width: 75%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 2%;
+	box-shadow: 0px 0px 25px 8px rgba(0, 0, 0, 0.51);
+}
+
+.btn-group {
+	width: 50%;
+	margin-top: 2%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.btn-group > * {
+	background: var(--secondary);
+	border: solid var(--dark) 2px;
+	padding: 1.5%;
+	font-family: var(--font-primary);
+	font-weight: bold;
+	color: salmon;
+	text-align: center;
+	margin: 10px;
+	border-radius: 25%;
+	cursor: pointer;
+	box-shadow: 0px -2px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn-group > *:hover {
+	background: var(--dark);
+	color: var(--light);
+	border: solid var(--secondary) 2px;
+	transform: translateY(-3px);
+	transition: all ease 0.5s;
+	box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+	background: var(--dark);
+	width: 95%;
+	height: 50%;
+	border: solid var(--secondary) 3px;
+	padding: 2%;
+}
+
+#beat-name {
+	font-family: var(--font-primary);
+	font-size: 75px;
+	color: salmon;
+	text-align: center;
+}
+
+#pad-container {
+	display: flex;
+	width: 100%;
+	height: 25%;
+	display: flex;
+	justify-self: flex-end;
+}
+
+.drum-pad {
+	background: var(--secondary);
+	width: 10%;
+	height: 100%;
+	border: solid var(--dark) 3px;
+	border-bottom: 0;
+	padding-top: 1%;
+	margin-left: 2%;
+	margin-right: 2%;
+	font-family: var(--font-secondary);
+	font-weight: bolder;
+	color: var(--dark);
+	text-align: center;
+	cursor: pointer;
+}
+
+.drum-pad-hover {
+	background: var(--primary);
+	padding-top: 1%;
+	color: var(--light);
+	font-size: 5vh;
+	box-shadow: 0px -2px 20px 5px rgba(0, 0, 0, 0.4);
+	transition: all linear 0.3s;
+}
+
+.drum-pad-clicked {
+	background: salmon;
+	width: 10%;
+	height: 100%;
+	border: solid var(--dark) 3px;
+	border-bottom: 0;
+	padding-top: 1%;
+	margin-left: 2%;
+	margin-right: 2%;
+	font-family: var(--font-secondary);
+	font-weight: bolder;
+	color: var(--light);
+	font-size: 5vh;
+	text-align: center;
+	cursor: pointer;
+}
+
+@media (max-width: 690px) {
+	#drum-machine {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	#beat-name {
+		font-size: 3rem;
+		margin-top: 10%;
+	}
+
+	.btn-group > * {
+		margin: 5px;
+	}
+}
